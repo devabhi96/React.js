@@ -1,51 +1,181 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
-    margin:0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-body{
-    font-family: "Poppins" , sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #111;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1280px;
-    margin:0 auto;
-    height: 72px;
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 72px;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-nav ul{
-    display:flex;
-    list-style: none;
-    gap :24px;
+.logo-container img {
+  width: 120px;
 }
 
-nav button{
-    width: 70px;
-    height: 30px; 
-    margin-top:30px;
-    background-color:rgb(189, 0, 0);
-    color:white;
-    border:none;
-
-
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
 }
 
-h1{
-    font-display: center;
-    
-    margin-left:150px;
-    margin-top:100px;
-    
-    
-
-
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.logo{
-    width: 200px;
+nav ul li a:hover {
+  color: red;
+}
+
+.login-btn {
+  width: 80px;
+  height: 32px;
+  background-color: rgba(245, 0, 0, 0.9);
+  border-radius: 4px;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: rgb(200, 0, 0);
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 60px auto;
+  padding: 20px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.shop-now {
+  width: 125px;
+  height: 40px;
+  border: none;
+  background-color: rgba(245, 0, 0, 0.9);
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-now:hover {
+  background-color: rgb(200, 0, 0);
+}
+
+.category-btn {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  color: gray;
+  font-weight: 600;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* SHOPPING ICONS */
+.shopping {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.brand-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.flipkart-logo {
+  width: 80px;
+}
+
+.amazon-logo {
+  width: 90px;
+}
+
+/* HERO IMAGE */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
 }
